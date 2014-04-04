@@ -3,12 +3,12 @@
 # Version 0.1
 # Histogram Viewer for image analysis and modification
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageStat
 from math import *
 import os, glob
 
 path = '/home/andrew/Dropbox/Developer/Python/histogramViwerResources' # Path where your pictures are stored
-
+# Pathing style for Windows: 'c:\\Users\\username\\'
 piclist = list() 
 x = 0
 
@@ -86,3 +86,15 @@ for x in range(0, len(piclist)): # Loops through for each image path in the list
 	# Now save and show the histogram    
 	# im.save('histogram.png', 'PNG')
 	im.show()
+
+	################################################################################
+	#								Assorted Functions							   #
+	################################################################################
+
+	def determineBrightness(imageToProcess):
+	   im = Image.open(imageToProcess)
+	   stat = ImageStat.Stat(im)
+	   r,g,b = stat.rms
+	   return math.sqrt(0.241*(r**2) + 0.691(g**2) + 0.068*(b**2))
+
+	   

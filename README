@@ -1,22 +1,29 @@
 README file for Digital Image Processing Project FALLBACK edition
-Language: Python / Java
+Language: Python / Java (Or just python apparently! Woo!)
 People: Andrew Hauser / Josh Rodkey / Christian Wirth
 
 Installation Notes:
-1. Must have ImageMagick installed
+1. Ensure that you are running Python 2.7, not 3.xx. Python 3 changed the entire way the code 	 operates, and while neat, its not necessary for this project.
+
+2. Must have ImageMagick installed
 	You can do this on a debian based linux system with "sudo apt-get install imagemagick".
-2. Must have PIL (Python Imaging Library) installed. 
+	On windows you can download it from here (x64): http://www.imagemagick.org/download/binaries/ImageMagick-6.8.8-10-Q16-x64-dll.exe
+
+3. Must have PIL (Python Imaging Library) installed. 
 	It is installed by default on Ubuntu.
-	You can get it for Windows from http://www.pythonware.com/products/pil/
+	You can install PIL on Windows with some registry modifications, since its only designed to work with 32bit. As it turns out, there's a forked project called PILlow that works the same way but offers more features and combatability. You can download the 64bit PILlow for Python 2.7 from here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#pil
+	Make sure to download "Pillow‑2.4.0.win‑amd64‑py2.7.exe"
 
 I can't ensure this will run on Windows as it is. It runs on Ubuntu Linux with ImageMagick and PIL just fine. Screenshots should be included in the git repo.
 So far, the program will display a histogram for each image in the folder.
+I have added a brightness determiner. Might change the algorithm later.
+I did get it to work on Windows with the above installs. Still no guarantee though.
 
 Things that haven't been implemented yet:
 
 1. A baseline
 2. Printing of information about the attributes of the images.
-3. A GUI
+3. A GUI <--- Christian is working on this!
 
 
 WE'RE OFF TO A GOOD START
